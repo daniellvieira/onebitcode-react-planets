@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import GrayImg from '../../shared/gray_img'
 import DescriptionWithLink from '../../shared/description_with_link'
 
@@ -43,7 +43,11 @@ class Planet extends React.Component {
           gray={this.props.gray}
         />
         <h4>Satélites</h4>
-        <ul>{this.state.satellites.map((satellite) => <li>{satellite.name}</li> )}</ul>
+        <ul>
+          {this.state.satellites.map((satellite, index) => 
+            <li key={index}>{satellite.name}</li> 
+          )}
+        </ul>
         <hr />
       </div>
     )

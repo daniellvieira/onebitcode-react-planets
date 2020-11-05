@@ -1,5 +1,5 @@
-import HelloWorld from './components/helloWorld'
-import LoremIpsum from './components/loremIpsum'
+// import HelloWorld from './components/helloWorld'
+// import LoremIpsum from './components/loremIpsum'
 import Planets from './components/planets'
 
 function App() {

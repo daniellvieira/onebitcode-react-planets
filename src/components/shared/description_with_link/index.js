@@ -10,7 +10,7 @@ const DescriptionWithLink = (props) => {
     return (
       <Fragment>
         <p>{props.description}</p>
-        <p><a href={props.link} target="_blank">{props.link}</a></p>
+        <p><a href={props.link} rel="noreferrer">{props.link}</a></p>
       </Fragment>
     )
   } else {
