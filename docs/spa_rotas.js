@@ -13,4 +13,6 @@
   React Router.
 
   npm i react-router-dom --save
+
+  Documentação: https://reacttraining.com/react-router
 */
