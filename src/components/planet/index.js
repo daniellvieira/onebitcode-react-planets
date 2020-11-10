@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import GrayImg from '../shared/gray_img'
 import DescriptionWithLink from '../shared/description_with_link'
 import Form from '../planet/form'
-import { useParams } from 'react-router-dom'
+import { Link, useParams, useHistory } from 'react-router-dom'
 
 async function getPlanet(id) {
   let response = await fetch(`http://localhost:3000/api/${id}.json`)
@@ -15,9 +15,14 @@ const Planet = () => {
   const [planet, setPlanet] = useState({})
 
   let { id } = useParams()
+  let history = useHistory()
 
   const addSatellite = (new_satellite) => {
     setSatellites([...satellites, new_satellite])
+  }
+
+  const goToHome = () => {
+    history.push('/')
   }
 
   useEffect(() => {
@@ -52,6 +57,8 @@ const Planet = () => {
           <li key={index}>{satellite.name}</li> 
         )}
       </ul>
+      <Link to='/'>Voltar by link</Link>
+      <button type="button" onClick={goToHome}>Voltar by history</button>
       <hr />
     </div>
   )
