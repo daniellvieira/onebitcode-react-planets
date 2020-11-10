@@ -1,13 +1,14 @@
 // aonde vao ficar todas as nossas rotas
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import PlanetScreen from './screens/planets'
-import Planet from './components/planets/planet'
+import PlanetsScreen from './screens/planets'
+import PlanetScreen from './screens/planet'
 
 const Routes = () => (
   <BrowserRouter>
     <Switch>
-    <Route exact path='/' component={PlanetScreen} />
+    <Route exact path='/' component={PlanetsScreen} />
+    <Route exact path='/planet' component={PlanetScreen} />
     </Switch>
   </BrowserRouter>
 )

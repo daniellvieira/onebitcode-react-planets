@@ -2,10 +2,10 @@
 
 import Planets from '../components/planets'
 
-const PlanetScreen = () => {
+const PlanetsScreen = () => {
   return (
     <Planets />
   )
 }
 
-export default PlanetScreen
+export default PlanetsScreen
